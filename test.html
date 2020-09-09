@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <h1>Benutzererfassung</h1>
+    <main>
+        <section>
+            <p>
+                <input name="prename" type="text" placeholder="Vorname" required/> 
+                <input name="lastname" type="text" placeholder="Nachname" required/>
+            </p>
+            <p>
+                <input name="street" type="text" placeholder="Strasse" required/>
+                <input name="number" type="text" placeholder="Nr. (optional)"/>
+            </p>
+            <p>
+                <input name="zipCode" type="number" placeholder="PLZ" pattern="\d{4}" required/>
+                <input name="location" type="text" placeholder="Ort" required/>
+            </p>
+            <p>
+                <input name="age" type="number" placeholder="Alter (optional)" pattern="(\d|\d{2})"/>
+                <input name="email" type="email" placeholder="E-Mail" required>
+            </p>
+        </section>
+        <section>
+            <input name="submit" type="submit" placeholder="Senden"/>
+        </section>
+    </main>
+</body>
+</html>
