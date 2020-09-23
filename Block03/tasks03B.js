@@ -1,20 +1,31 @@
-function wordCounter(text) {
+function countWordsOf(text) {
+    const words = text.split(" ");
+
+    let dictionary = {};
+    for (const word of words) {
+        if (dictionary[word]) {
+            dictionary[word]++;
+        } else {
+            dictionary[word] = 1;
+        }
+    }
+
     let countedWords = [];
-    //let oldWords = [];
-    let numberOfWords = 0;
-
-    for (" " in text) {
-        numberOfWords++;
-    }
-    numberOfWords++;
-
-    for (i = 0; i <= numberOfWords; i++) {
-        //let word = text[]
+    for (const word in dictionary) {
+        const count = dictionary[word];
+        countedWords = [...countedWords, {word: word, count: count}];
     }
 
-    //return countedWords;
+    let outputString = "";
+    for (const word in countedWords) {
+        outputString += "Word: " + countedWords[word].word + ", Count: " + countedWords[word].count + " * ";
+    }
+    
+    return outputString;
 }
 
+document.write(countWordsOf("Das ist ein Test der ein Test ist"));
+console.log(countWordsOf("Das ist ein Test der ein Test ist"));
 
 function varFunction() {
     var v = 1;
