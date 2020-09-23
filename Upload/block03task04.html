@@ -7,26 +7,28 @@
     <title>Aufgabe 04 Block 03C</title>
 </head>
 <body>
-    <section>
-        <label>Anzahl Schrauben: </label>
-        <input type="text" name="screw">
-    </section>
-    <section>
-        <label>Anzahl Muttern: </label>
-        <input type="text" name="screwnut">
-    </section>
-    <section>
-        <label>Anzahl Unterlagsscheiben: </label>
-        <input type="text" name="grommet">
-    </section>
-    <section>
-        <button name="send" class="send">Absenden</button>
-        <button name="reset" class="reset">Reset</button>
-    </section>
-    <section>
-        <label>Preis: </label>
-        <input type="text" name="price">
-    </section>
+    <form id="calculatePriceScrews">
+        <section>
+            <label>Anzahl Schrauben: </label>
+            <input type="text" id="screw">
+        </section>
+        <section>
+            <label>Anzahl Muttern: </label>
+            <input type="text" id="screwnut">
+        </section>
+        <section>
+            <label>Anzahl Unterlagsscheiben: </label>
+            <input type="text" id="grommet">
+        </section>
+        <section>
+            <input type="submit">
+            <input type="reset">
+        </section>
+        <section>
+            <label>Preis: </label>
+            <p id="price"></p>
+        </section>
+    </form>
 
     <script src="block03task04.js"></script>
         
