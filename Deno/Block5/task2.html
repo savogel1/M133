@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch-Aufgabe2</title>
+</head>
+<body>
+    <form>
+        <input type="number"/>
+        <button type="submit">Anzeigen</button>
+    </form>
+    <h1></h1>
+    <article></article>
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", event => {
+            event.preventDefault();
+            const id = document.querySelector("input").valueAsNumber;
+            const url = `http://jsonplaceholder.typicode.com/todos/${id}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(post => {
+                    console.log("json: ", post);
+                    const h1 = document.querySelector("h1");
+                    const article = document.querySelector("article");
+                    h1.innerText = post.title;
+                    article.innerText = post.body;
+                })
+                .catch(errorReason => console.error(errorReason));
+        })
+    </script>
+</body>
+</html>

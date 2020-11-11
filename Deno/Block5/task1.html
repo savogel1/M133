@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch-Aufgabe1</title>
+</head>
+<body>
+    <script>
+        fetch('http://jsonplaceholder.typicode.com/todos/1')
+            .then(response => response.json())
+            .then(jsonObject => console.log("json: ", jsonObject))
+            .catch(errorReason => console.error(errorReason));
+    </script>
+</body>
+</html>
